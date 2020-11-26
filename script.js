@@ -1,4 +1,5 @@
 console.log('its connected')
+console.log('hello again')
 
 const questions = [
 
@@ -40,7 +41,47 @@ const questions = [
     
         ]
     
-      }
+      },
+      {
+  
+        question: 'Everyone knows I am right that Rober Pattison has to damp Kristen Stewart. In a couple of years, he will thank me. Be smart, Robert!',
+    
+        answers: [
+    
+          { text: 'Trump', correct: true },
+    
+          { text: 'Kanye', correct: false }
+    
+        ]
+    
+      },
+      {
+  
+        question: 'Do you know where to find marbel conference tables? I am looking to have a conference. Not until I get a table, though.',
+    
+        answers: [
+    
+          { text: 'Trump', correct: false },
+    
+          { text: 'Kanye', correct: true }
+    
+        ]
+    
+      },
+      {
+  
+        question: `Sorry losers and haters, but my I.Q. is one of the highest - and you all know it! Please don't feel so stupid or insecure, it's not your fault .`,
+    
+        answers: [
+    
+          { text: 'Trump', correct: true },
+    
+          { text: 'Kanye', correct: false }
+    
+        ]
+    
+      },
+
 ]
 
 const totalQuestions = questions.length
@@ -127,24 +168,24 @@ function resetState(){
  
  function updateScore(){
     score++
-    document.getElementById("scoreDiv").innerHTML = `SCORE : ${score}`;
+    document.getElementById("scoreDiv").innerHTML = `YOU SCORED ${score} OUT OF 6`;
  }
 
  function showResult(){
-    if (score >= 2) {
+    if (score >= 4) {
         questionContainer.classList.add("hide")
         successfulEnd()
         document.querySelector('.card h1').innerText = "You are a CHUMP"
-        // startButton.innerText = "Want to restart?"
-        // startButton.classList.remove('hide')
+        //startButton.innerText = "Want to restart?"
+       // startButton.classList.remove('hide')
     }
     else {
        questionContainer.classList.add("hide")
        badEnd()
        document.querySelector('.card h1').innerText = "Next time"
 
-    //    startButton.innerText = "Want to restart?"
-    //    startButton.classList.remove('hide')
+    // startButton.innerText = "Want to restart?"
+     //startButton.classList.remove('hide')
     }
 
  }
@@ -174,4 +215,4 @@ function resetState(){
      element.classList.remove('correct')
      element.classList.remove('wrong')
  }
- document.getElementById("scoreDiv").innerHTML = `SCORE : ${score}`;
+ 
