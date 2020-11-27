@@ -206,6 +206,7 @@ function resetState(){
     document.getElementById("scoreDiv").classList.add('hide')
     document.getElementById("bad-result").classList.add('hide')
     document.getElementById("good-result").classList.add('hide')
+    document.querySelector('.card h1').innerText = "Who tweeted it?"
  }
 
  function setStatusClass(element,correct){
