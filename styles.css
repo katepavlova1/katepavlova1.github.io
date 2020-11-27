@@ -40,7 +40,7 @@ body .wrong {
     background-color:white;
     border-radius:5px;
     padding:10px;
-    box-shadow: 0 0 10px 2px darkblue;
+    box-shadow: 0 0 10px 2px #1D97A1;
     color:black; 
 }
 
@@ -62,7 +62,7 @@ body .wrong {
 }
 
 .btn:hover {
-    background-color: darkblue; 
+    background-color: #177C85; 
 }
 .btn:active, .btn:focus {
     background-color: black;
@@ -94,15 +94,16 @@ padding: 10px 20px;
 }
 
 #question {
-    font-size: 20px;
-    text-transform: uppercase;
+    margin-top:13px;
+    font-size: 30px;
     font-style: italic;
     text-align:center;
 }
 
 #scoreDiv{
     margin-top: 50px;
-    background-color: yellow;
+    border: 0.75rem solid;
+    padding:10px;
     color:black;
     font-size : 1.75rem;
     font-weight: bold;

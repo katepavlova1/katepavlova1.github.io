@@ -44,7 +44,7 @@ const questions = [
       },
       {
   
-        question: 'Everyone knows I am right that Rober Pattison has to damp Kristen Stewart. In a couple of years, he will thank me. Be smart, Robert!',
+        question: 'Everyone knows I am right that Robert Pattison has to damp Kristen Stewart. In a couple of years, he will thank me. Be smart, Robert!',
     
         answers: [
     
@@ -113,6 +113,7 @@ nextButton.addEventListener('click', ()=> {
 
 function startGame(){
     console.log ('started')
+    hideResult()
     startButton.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
@@ -160,7 +161,7 @@ function resetState(){
      if (correct){updateScore()}
     //  Array.from(answerElement.children).forEach(button=> {
     //      setStatusClass (button, button.dataset.correct)
-    //  })
+    // })
      if(shuffledQuestions.length > currentQuestionIndex+1) {
         nextButton.classList.remove('hide')
      } else showResult() 
@@ -176,16 +177,16 @@ function resetState(){
         questionContainer.classList.add("hide")
         successfulEnd()
         document.querySelector('.card h1').innerText = "You are a CHUMP"
-        //startButton.innerText = "Want to restart?"
-       // startButton.classList.remove('hide')
+        startButton.innerText = "Want to restart?"
+        startButton.classList.remove('hide')
     }
     else {
        questionContainer.classList.add("hide")
        badEnd()
        document.querySelector('.card h1').innerText = "Next time"
 
-    // startButton.innerText = "Want to restart?"
-     //startButton.classList.remove('hide')
+    startButton.innerText = "Want to restart?"
+    startButton.classList.remove('hide')
     }
 
  }
@@ -201,6 +202,11 @@ function resetState(){
     document.getElementById("bad-result").classList.remove('hide')
  }
 
+ function hideResult(){
+    document.getElementById("scoreDiv").classList.add('hide')
+    document.getElementById("bad-result").classList.add('hide')
+    document.getElementById("good-result").classList.add('hide')
+ }
 
  function setStatusClass(element,correct){
      clearStatusClass(element)
